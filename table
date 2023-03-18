@@ -1,0 +1,55 @@
+CREATE TABLE pizza.category (
+	id SMALLINT PRIMARY KEY auto_increment NOT NULL,
+    category_name character varying(128) NOT NULL
+)
+
+CREATE TABLE pizza.products(
+    id MEDIUMINT PRIMARY KEY auto_increment NOT NULL,
+    title character varying(128) NOT NULL,
+    img_path character varying(128) NOT NULL,
+    description TEXT NOT NULL,
+    section_number TINYINT,
+    total SMALLINT,
+    diameter SMALLINT,
+    weight SMALLINT,
+    volume float,
+    price  SMALLINT NOT NULL,
+    category_id SMALLINT NOT NULL
+)
+
+
+----------------------------------
+
+
+CREATE TABLE pizza.orders(
+    id MEDIUMINT PRIMARY KEY auto_increment NOT NULL,
+    title character varying(128) NOT NULL,
+    price  SMALLINT NOT NULL,
+    id_user SMALLINT NOT NULL,
+    status character varying(128) NOT NULL,
+    billId  character varying(128) NOT NULL,
+    quantity  SMALLINT NOT NULL,
+    totalPrice SMALLINT 
+)
+
+----------------------------------
+
+CREATE TABLE pizza.settings(
+    id MEDIUMINT PRIMARY KEY auto_increment NOT NULL,
+    title character varying(128) NOT NULL,
+    status boolean not null default true 
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
